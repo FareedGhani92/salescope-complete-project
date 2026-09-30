@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2c">
+  <meta name="description" content="Salescope turns your daily sales history into clear business insights and carefully evaluated forecasts.">
+  <title>Salescope · Sales intelligence</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%230a7d76'/%3E%3Cpath d='M10 32 20 22l7 6 12-15M12 15h10M36 36h-9' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" aria-label="Salescope home"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 22 12 14l6 5 10-12M7 8h7M27 27h-8"/></svg></span><span><b>salescope</b><small>Sales intelligence</small></span></a>
+      <div class="side-caption">WORKSPACE</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#overview" data-page="overview"><span class="nav-icon">◫</span>Overview</a>
+        <a class="nav-link" href="#analysis" data-page="analysis"><span class="nav-icon">⌁</span>Sales analysis</a>
+        <a class="nav-link" href="#forecast" data-page="forecast"><span class="nav-icon">↗</span>Forecast studio<span class="nav-new">AI</span></a>
+        <a class="nav-link" href="#performance" data-page="performance"><span class="nav-icon">▥</span>Model performance</a>
+        <a class="nav-link" href="#data" data-page="data"><span class="nav-icon">▤</span>Data workspace</a>
+        <a class="nav-link" href="#reports" data-page="reports"><span class="nav-icon">⇩</span>Reports & guide</a>
+      </nav>
+      <div class="side-bottom"><div class="demo-card"><span class="demo-spark">✳</span><b>Portfolio demo</b><p>Explore the sample store data or bring your own CSV or Excel file.</p><button id="sidebar-upload" class="side-upload">Upload data <span>↗</span></button></div><div class="side-user"><span class="avatar">S</span><span><b>Salescope</b><small>Personal workspace</small></span><span class="user-dots">···</span></div></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation">☰</button><div class="breadcrumbs"><span>Workspace</span><i>/</i><b id="page-crumb">Overview</b></div><div class="top-actions"><span class="live-indicator" id="service-status" data-state="checking" role="status" aria-live="polite"><i></i><span>Connecting to forecast service…</span></span><button class="icon-button" id="help-button" aria-label="Help">?</button><span class="top-avatar">S</span></div></header>
+      <div class="content" id="content"></div>
+      <footer class="footer"><span><span class="footer-mark">✳</span> Salescope <span class="footer-dot">·</span> Thoughtful sales planning</span><span>Portfolio demo · Synthetic data</span></footer>
+    </main>
+  </div>
+  <input type="file" id="file-input" accept=".csv,.xlsx" hidden>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Close">×</button><div id="modal-body"></div></section></div>
+  <script src="/vendor/xlsx.full.min.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

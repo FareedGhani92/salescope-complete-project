@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "model": "Ridge regression",
+    "currency": "USD",
+    "scope": "All sales",
+    "dataset_id": "919b5dad5765a777f7cc",
+    "horizon_days": 30,
+    "history_days": 1096,
+    "training_start": "2023-01-01",
+    "training_cutoff": "2025-12-31",
+    "test_start": "2025-12-02",
+    "test_end": "2025-12-31",
+    "validation_folds": 3,
+    "validation_horizon_days": 30,
+    "selection_metric": "Validation MAE",
+    "calibration_origins": 20,
+    "interval_method": "80th percentile of absolute errors at each horizon; 20 overlapping historical origins; empirical, not guaranteed",
+    "generated_at": "2026-09-30T13:59:38.224430+00:00",
+    "random_seed": 2026,
+    "python_version": "3.13.15",
+    "model_implementation": "NumPy native v1",
+    "features": [
+      "lag_1",
+      "lag_7",
+      "lag_14",
+      "lag_28",
+      "mean_7",
+      "mean_28",
+      "std_7",
+      "weekday_sin",
+      "weekday_cos",
+      "year_sin",
+      "year_cos",
+      "trend"
+    ],
+    "parameters": {
+      "ridge_alpha": 10,
+      "boosting_estimators": 40,
+      "boosting_max_depth": 2,
+      "boosting_max_splits": 16,
+      "boosting_learning_rate": 0.075,
+      "boosting_min_leaf": 12,
+      "boosting_l2": 10
+    },
+    "data_source": "Synthetic retail demo",
+    "execution_seconds": 0.59
+  },
+  "test_metrics": {
+    "MAE": 4055.787097386105,
+    "RMSE": 4465.759623474336,
+    "WAPE (%)": 9.063384489636224,
+    "baseline_MAE": 3597.9786666666664,
+    "improvement_pct": -12.724045169049694,
+    "coverage_pct": 26.666666666666668,
+    "mean_band_width": 6417.978926781594
+  }
+}

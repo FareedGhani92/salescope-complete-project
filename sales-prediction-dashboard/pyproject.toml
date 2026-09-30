@@ -1,0 +1,20 @@
+[project]
+name = "salescope-dashboard"
+version = "1.0.0"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "pandas==2.3.3",
+    "numpy==2.5.3",
+    "openpyxl==3.1.5",
+    "fastapi>=0.115,<1",
+]
+
+[tool.uv]
+package = false
+
+[tool.vercel]
+entrypoint = "main:app"
+
+[tool.vercel.fastapi.static]
+cdn = true
+exclude = true
