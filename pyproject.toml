@@ -16,5 +16,5 @@ package = false
 entrypoint = "main:app"
 
 [tool.vercel.fastapi.static]
-cdn = true
-exclude = true
+cdn = false
+exclude = false
